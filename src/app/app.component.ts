@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Course';
+  status = 'Excellent';
+  rating = '9 out of 10';
+
+  getStatus() {
+    return this.status;
+  }
 }
