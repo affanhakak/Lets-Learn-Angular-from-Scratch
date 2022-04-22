@@ -1,2 +1,10 @@
 <div>These are servers</div>
-<button class="btn btn-primary" [disabled]="!allowNewUser">Click Me</button>
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewUser"
+  (click)="onCreateUser()"
+>
+  Click Me
+</button>
+{{ userCreationStatus }}
+{{ allowNewUser }}
