@@ -1,4 +1,8 @@
-<div>These are servers</div>
+<div>These are Users</div>
+<input type="text" class="form-control" (input)="onUpdateUser($event)" />
+<div>
+  {{ userName }}
+</div>
 <button
   class="btn btn-primary"
   [disabled]="!allowNewUser"
@@ -6,5 +10,10 @@
 >
   Click Me
 </button>
-{{ userCreationStatus }}
-{{ allowNewUser }}
+<div>
+  {{ allowNewUser }}
+</div>
+
+<div>
+  {{ userCreationStatus }}
+</div>
