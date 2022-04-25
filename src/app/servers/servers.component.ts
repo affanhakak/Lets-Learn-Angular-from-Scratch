@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewUser = false;
   userCreationStatus = 'no user was created!';
-  userName = '';
+  userName = 'Test User';
+  userCreated = false;
   constructor() {
     setTimeout(() => {
       this.allowNewUser = true;
@@ -17,6 +18,7 @@ export class ServersComponent implements OnInit {
 
   ngOnInit(): void {}
   onCreateUser() {
+    this.userCreated = true;
     this.userCreationStatus = 'user was created';
   }
   onUpdateUser(event: any) {

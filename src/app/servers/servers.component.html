@@ -1,8 +1,8 @@
 <div>These are Users</div>
-<!-- <input type="text" class="form-control" (input)="onUpdateUser($event)" />
+<input type="text" class="form-control" (input)="onUpdateUser($event)" />
 <div>
   {{ userName }}
-</div> -->
+</div>
 <input type="text" class="form-control" [(ngModel)]="userName" />
 <button
   class="btn btn-primary"
@@ -18,3 +18,5 @@
 <div>
   {{ userCreationStatus }}
 </div>
+
+<div *ngIf="userCreated">User was created. The name is {{ userName }}</div>
