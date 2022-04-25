@@ -19,4 +19,10 @@
   {{ userCreationStatus }}
 </div>
 
-<div *ngIf="userCreated">User was created. The name is {{ userName }}</div>
+<div *ngIf="userCreated; else noServer">
+  User was created. The name is {{ userName }}
+</div>
+
+<ng-template #noServer>
+  <div>User wasn't created</div>
+</ng-template>
